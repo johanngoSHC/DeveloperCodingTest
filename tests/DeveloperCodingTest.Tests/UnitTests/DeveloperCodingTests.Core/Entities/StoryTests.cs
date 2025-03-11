@@ -1,4 +1,4 @@
-﻿namespace DeveloperCodingTest.Tests.UnitTests.DeveloperCodingTests.Core;
+﻿namespace DeveloperCodingTest.Tests.UnitTests.DeveloperCodingTests.Core.Entities;
 
 using DeveloperCodingTest.Core.Entities.StoryAggregate;
 using DeveloperCodingTest.Core.Exceptions;

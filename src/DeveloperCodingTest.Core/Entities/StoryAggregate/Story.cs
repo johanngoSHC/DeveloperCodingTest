@@ -1,10 +1,9 @@
-﻿using System.Globalization;
-
-namespace DeveloperCodingTest.Core.Entities.StoryAggregate;
+﻿namespace DeveloperCodingTest.Core.Entities.StoryAggregate;
 
 using Ardalis.GuardClauses;
 using Extensions;
 using Interfaces;
+using System.Globalization;
 
 
 public class Story : IAggregateRoot

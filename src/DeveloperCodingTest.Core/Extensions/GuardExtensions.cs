@@ -1,9 +1,8 @@
-﻿using System.Globalization;
-
-namespace DeveloperCodingTest.Core.Extensions;
+﻿namespace DeveloperCodingTest.Core.Extensions;
 
 using Ardalis.GuardClauses;
 using Exceptions;
+using System.Globalization;
 
 
 public static class GuardExtensions

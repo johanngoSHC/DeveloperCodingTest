@@ -65,7 +65,6 @@ public class StoryTests
     [InlineData("2019-10-12")]
     [InlineData("2019-10-12 13:43:01+00:00")]
     [InlineData("2019-13-12T13:43:01+00:00")]
-
     public void Should_ThrowException_When_DateTimeIsInvalid(string? invalidTime)
     {
         // Arrange
@@ -101,5 +100,20 @@ public class StoryTests
         Assert.Equal(DateTime.Parse(dateTime), story.Time);
         Assert.Equal(score, story.Score);
         Assert.Equal(commentCount, story.CommentCount);
+    }
+
+    [Fact]
+    public void GetIdAndScore_ShouldReturnIdAndScoreAsKeyValuePair()
+    {
+        // Arrange
+        var story = new Story(StoryId, StoryTitle, StoryUri, StoryPostedBy, StoryDateTime, StoryScore, StoryCommentCount);
+
+        // Act
+        var idAndScore = story.GetIdAndScore();
+
+        // Assert
+        Assert.Equal(StoryId, idAndScore.Key);
+        Assert.Equal(StoryScore, idAndScore.Value);
+        Assert.IsType<KeyValuePair<int, int>>(idAndScore);
     }
 }

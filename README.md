@@ -15,7 +15,7 @@ Prerequisites
 Steps to Run (from your prefered terminal)
 
 * ``` git clone https://github.com/johanngoSHC/DeveloperCodingTest.git```
-* ``` cd .\src\DeveloperCodingTest.Api\```
+* ``` cd .\DeveloperCodingTest\src\DeveloperCodingTest.Api\```
 *  ``` dotnet run```
 
  Finally

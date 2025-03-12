@@ -59,8 +59,8 @@ app.UseMiddleware<RateLimitMiddleware>();
 // Use rate limiting middleware
 app.UseRateLimiter();
 
-
-if (app.Environment.IsDevelopment())
+//TODO: For some production API is not recommendable to expose this. For the purpose of this test we expose it 
+if (app.Environment.IsProduction())
 {
     app.MapOpenApi();
     app.MapScalarApiReference(options =>

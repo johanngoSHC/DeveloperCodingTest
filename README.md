@@ -171,24 +171,104 @@ Resilience | Exponential Backoff, Rate Limiting, Circuit Breaker|
 
 🛠️ Enhancements & Future Work
 
-Introduce distributed caching (Redis) for scalability.
-Implement background jobs for periodic updates to cache.
-Increment Code Coverage
-In Addition, added TODO comments where I think refactors can happen
-<src>
-  <DeveloperCodingTest.Api>
-    Program.cs
-      TODO: The solution can be reworked into minimal api for simplicity and remove bulky code
-      TODO: Rate limiting can be implemented directly on API Gateway at infrastructure level
-      TODO: For some production API is not recommendable to expose this. For the purpose of this test we expose it
-  <DeveloperCodingTest.Core>
-    Helpers
-      SortEngineHelper.cs
-        TODO: Current implementation is enough for sorting small data collections. For higher inputs would recommend a merge sort implementation
-    Queries
-      GetBestStoriesQuery.cs
-        TODO: Cache service can be reworked to use an instance of Redis
-        TODO: Logger can be integrated with Serilog and be published to a cloud bucket
+* Introduce distributed caching (Redis) for scalability.
+* Implement background jobs for periodic updates to cache.
+* Increment Code Coverage
+* In Addition I added TODO comments where I think refactors can happen:<br>
+<html>
+  <body>
+    <ul>
+      <li>
+        <i class="i0"></i>
+        <span>&lt;src&gt;</span>
+      </li>
+      <ul>
+        <li>
+          <i class="i1"></i>
+          <span>&lt;DeveloperCodingTest.Api&gt;</span>
+        </li>
+        <ul>
+          <li>
+            <i class="i2"></i>
+            <span>Program.cs</span>
+          </li>
+          <ul>
+            <li>
+              <i class="i3"></i>
+              <span class="t0">TODO</span>
+              <span class="t1">: The solution can be reworked into minimal api for simplicity and remove bulky code</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i class="i3"></i>
+              <span class="t0">TODO</span>
+              <span class="t1">: Rate limiting can be implemented directly on API Gateway at infrastructure level</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i class="i3"></i>
+              <span class="t0">TODO</span>
+              <span class="t1">: For some production API is not recommendable to expose this. For the purpose of this test we expose it</span>
+            </li>
+          </ul>
+        </ul>
+      </ul>
+      <ul>
+        <li>
+          <i class="i1"></i>
+          <span>&lt;DeveloperCodingTest.Core&gt;</span>
+        </li>
+        <ul>
+          <li>
+            <i class="i4"></i>
+            <span>Helpers</span>
+          </li>
+          <ul>
+            <li>
+              <i class="i2"></i>
+              <span>SortEngineHelper.cs</span>
+            </li>
+            <ul>
+              <li>
+                <i class="i3"></i>
+                <span class="t0">TODO</span>
+                <span class="t1">: Current implementation is enough for sorting small data collections. For higher inputs would recommend a merge sort implementation</span>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+        <ul>
+          <li>
+            <i class="i4"></i>
+            <span>Queries</span>
+          </li>
+          <ul>
+            <li>
+              <i class="i2"></i>
+              <span>GetBestStoriesQuery.cs</span>
+            </li>
+            <ul>
+              <li>
+                <i class="i3"></i>
+                <span class="t0">TODO</span>
+                <span class="t1">: Cache service can be reworked to use an instance of Redis</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <i class="i3"></i>
+                <span class="t0">TODO</span>
+                <span class="t1">: Logger can be integrated with Serilog and be published to a cloud bucket</span>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+  </body>
+</html>
 
 
 

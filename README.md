@@ -140,14 +140,14 @@ Flow Diagram
 
 ```mermaid
 graph TD;
-    Client -->|Request| Our_API;
-    Our_API -->|Check Cache| In_Memory_Cache;
-    Our_API -->|If Not Cached| External_API;
-    In_Memory_Cache -->|Return Data| Our_API;
-    External_API -->|Fetch Data| Our_API;
-    Our_API -->|Send Response| Client;
+    Client -->|Request| DeveloperCodingTest.Api;
+    DeveloperCodingTest.Api -->|Check Cache| In_Memory_Cache;
+    DeveloperCodingTest.Api -->|If Not Cached| External_API;
+    In_Memory_Cache -->|Return Data| DeveloperCodingTest.Api;
+    HackerNewsAPI -->|Fetch Data| DeveloperCodingTest.Api;
+    DeveloperCodingTest.Api -->|Send Response| Client;
     
-    subgraph "External API"
+    subgraph "HackerNewsAPI"
         External_API[Hacker News API]
     end
     
@@ -172,9 +172,25 @@ Resilience | Exponential Backoff, Rate Limiting, Circuit Breaker|
 🛠️ Enhancements & Future Work
 
 Introduce distributed caching (Redis) for scalability.
-
 Implement background jobs for periodic updates to cache.
+Increment Code Coverage
+In Addition, added TODO comments where I think refactors can happen
+<src>
+  <DeveloperCodingTest.Api>
+    Program.cs
+      TODO: The solution can be reworked into minimal api for simplicity and remove bulky code
+      TODO: Rate limiting can be implemented directly on API Gateway at infrastructure level
+      TODO: For some production API is not recommendable to expose this. For the purpose of this test we expose it
+  <DeveloperCodingTest.Core>
+    Helpers
+      SortEngineHelper.cs
+        TODO: Current implementation is enough for sorting small data collections. For higher inputs would recommend a merge sort implementation
+    Queries
+      GetBestStoriesQuery.cs
+        TODO: Cache service can be reworked to use an instance of Redis
+        TODO: Logger can be integrated with Serilog and be published to a cloud bucket
 
-Add advanced observability with request tracking and analytics.
 
-Expand resilience strategies by incorporating policies like retries and failovers.
+
+
+

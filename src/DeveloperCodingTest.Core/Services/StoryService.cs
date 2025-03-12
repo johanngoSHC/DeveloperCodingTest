@@ -1,7 +1,6 @@
 ﻿namespace DeveloperCodingTest.Core.Services;
 
 using System.Collections.Generic;
-using Ardalis.GuardClauses;
 using Interfaces;
 using Helpers;
 

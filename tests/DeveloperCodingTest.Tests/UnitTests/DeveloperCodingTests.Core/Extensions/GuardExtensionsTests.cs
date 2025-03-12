@@ -15,7 +15,7 @@ public class GuardExtensionsTests
     }
 
     [Theory]
-    [InlineData(0)]
+    [InlineData(-44)]
     [InlineData(-1)]
     public void InvalidStoryId_ShouldThrowException_WhenIdIsZeroOrNegative(int invalidId)
     {

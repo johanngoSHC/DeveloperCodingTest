@@ -16,7 +16,7 @@ public class Story : IAggregateRoot
     public int Score { get; private set; }
     public int CommentCount { get; private set; }
 
-    public Story(int id, string? title, string? uri, string postedBy, string? time, int score, int commentCount)
+    public Story(int id, string? title, string? uri, string? postedBy, string? time, int score, int commentCount)
     {
         Guard.Against.InvalidStoryId(id);
         Guard.Against.InvalidStoryUri(uri);
@@ -33,5 +33,10 @@ public class Story : IAggregateRoot
             CultureInfo.InvariantCulture);
         this.Score = score;
         this.CommentCount = commentCount;
+    }
+
+    public KeyValuePair<int, int> GetIdAndScore()
+    {
+        return new KeyValuePair<int, int>(this.Id, this.Score);
     }
 }
